@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package Entities;
+
 import java.util.Objects;
 
 public class AirPort {
@@ -37,7 +38,7 @@ public class AirPort {
 
     @Override
     public String toString() {
-        return "AirPort{" +
+        return "Entities.AirPort{" +
                 "airportName='" + airportName + '\'' +
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +

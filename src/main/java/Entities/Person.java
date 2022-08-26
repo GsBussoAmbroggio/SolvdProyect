@@ -1,5 +1,6 @@
+package Entities;
 
-    public abstract class Person {
+public abstract class Person {
 
 //Attributes
         private int age;

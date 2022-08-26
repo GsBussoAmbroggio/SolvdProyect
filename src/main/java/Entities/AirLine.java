@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+package Entities;
+
 import java.util.Objects;
 
 public class AirLine {
@@ -21,7 +21,7 @@ public class AirLine {
 
     @Override
     public String toString() {
-        return "AirLine{" +
+        return "Entities.AirLine{" +
                 "name='" + name + '\'' +
                 ", flightNumber=" + flightNumber +
                 ", flight=" + flight +

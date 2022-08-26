@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+package Entities;
+
 import java.util.Objects;
 
 public class Flight {
@@ -10,13 +10,13 @@ public class Flight {
     private double price;
     private final int numMaxPassenger = 366;
 
-    private Passenger passenger;
+    private Passenger2 passenger;
 
 
 
 //Constructor
 
-    public Flight(String id, String originCity, String destinationCity, double price, Passenger passenger) {
+    public Flight(String id, String originCity, String destinationCity, double price, Passenger2 passenger) {
         this.id = id;
         this.originCity = originCity;
         this.destinationCity = destinationCity;
@@ -26,7 +26,7 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight{" +
+        return "Entities.Flight{" +
                 "id='" + id + '\'' +
                 ", originCity='" + originCity + '\'' +
                 ", destinationCity='" + destinationCity + '\'' +
@@ -87,11 +87,11 @@ public class Flight {
         this.destinationCity = destinationCity;
     }
 
-    public Passenger getPassenger() {
+    public Passenger2 getPassenger() {
         return passenger;
     }
 
-    public void setPassenger(Passenger passenger) {
+    public void setPassenger(Passenger2 passenger) {
         this.passenger = passenger;
     }
 

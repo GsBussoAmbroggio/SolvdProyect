@@ -1,3 +1,7 @@
+package Interfaces;
+
+import Entities.Passenger2;
+
 import java.util.ArrayList;
 
 public interface OperatorPFiles {

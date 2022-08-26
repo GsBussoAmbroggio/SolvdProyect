@@ -1,3 +1,5 @@
+package Entities;
+
 public enum Country {
     ARGENTINA ("Ezeiza"),
     BRASIL ("xx"),

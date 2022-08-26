@@ -1,3 +1,5 @@
+package Entities;
+
 import java.util.Objects;
 
 public class PublicHangar extends AirPort {
@@ -14,7 +16,7 @@ public class PublicHangar extends AirPort {
 
     @Override
     public String toString() {
-        return "PublicHangar{" +
+        return "Entities.PublicHangar{" +
                 "grant=" + grant +
                 "} " + super.toString();
     }

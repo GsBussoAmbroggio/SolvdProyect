@@ -1,6 +1,7 @@
+package Entities;
+
 import Interfaces.IPrivateHangar;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class PrivateHangar extends AirPort implements IPrivateHangar {
@@ -21,7 +22,7 @@ public class PrivateHangar extends AirPort implements IPrivateHangar {
 
     @Override
     public String toString() {
-        return "PrivateHangar{" +
+        return "Entities.PrivateHangar{" +
                 "taxes=" + taxes +
                 ", numAirline=" + numAirline +
                 ", airLine=" + airLine +

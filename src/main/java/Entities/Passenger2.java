@@ -1,10 +1,16 @@
+package Entities;
+
+import Interfaces.OperatorPFiles;
+import Interfaces.Services;
+
+import javax.swing.*;
 import java.io.*;
 import java.util.*;
 import java.util.Objects;
 import java.util.function.IntFunction;
 import java.util.stream.Stream;
 
-public class Passenger2 implements OperatorPFiles {
+public final class Passenger2 extends ArrayList implements OperatorPFiles, Services {
 
         //Attributes
         private String name;
@@ -13,7 +19,7 @@ public class Passenger2 implements OperatorPFiles {
         private boolean list;
 
     //Empty Constructor
-//public Passenger2() {
+//public Entities.Passenger2() {
 
 //}
 
@@ -26,20 +32,32 @@ public class Passenger2 implements OperatorPFiles {
         Nationality = nationality;
     }
 
-    @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof Passenger)) return false;
-            Passenger passenger = (Passenger) o;
-            return Objects.equals(getName(), passenger.getName()) && Objects.equals(getPassport(), passenger.getPassport()) && Objects.equals(getNationality(), passenger.getNationality());
-        }
 
-        @Override
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Passenger2)) return false;
+        Passenger2 that = (Passenger2) o;
+        return list == that.list && Objects.equals(getName(), that.getName()) && Objects.equals(getPassport(), that.getPassport()) && Objects.equals(getNationality(), that.getNationality());
+    }
+
+    @Override
         public int hashCode() {
             return Objects.hash(getName(), getPassport(), getNationality());
         }
 
-        @Override
+    @Override
+    public Stream stream() {
+        return super.stream();
+    }
+
+    @Override
+    public Stream parallelStream() {
+        return super.parallelStream();
+    }
+
+    @Override
         public String toString() {
             return "Passenger{" +
                     "name='" + name + '\'' +
@@ -47,10 +65,40 @@ public class Passenger2 implements OperatorPFiles {
                     ", Nationality='" + Nationality + '\'' +
                     '}';
         }
+//TODO Interfaces.Services methods
+//Interface Interfaces.Services Methods
+    @Override
+    public ArrayList CreatePassenger(ArrayList<Passenger2>Passengerlist){
+
+
+        int n = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter how many passengers there are in this flight "));
+        Passenger2[] passenger = new Passenger2[n];
+        for(int i=0; i<n; i++) {
+            passenger[i] = new Passenger2();
+        }
+        List<Passenger2> PassengerList = new ArrayList<Passenger2>(Arrays.asList(passenger));
+        return (ArrayList) PassengerList;
+    }
 
 
 
-//Interface Methods
+
+
+    //String name = JOptionPane.showInputDialog(null, "Enter Passenger name.");
+        //name = name.toUpperCase();
+        //P.setName(name);
+        //String passport = JOptionPane.showInputDialog(null, "Enter Passenger Passport number.");
+        //passport= passport.toUpperCase();
+        //P.setPassport(passport);
+        //String nacionality = JOptionPane.showInputDialog(null, "Enter Passenger`s nacionality.");
+        //nacionality= nacionality.toUpperCase();
+        //P.setNationality(nacionality);
+
+        //return P;
+        //return null;
+
+
+    //Interface Interfaces.OperatorPFiles Methods
     @Override
     public void createFile(ArrayList <Passenger2> list) {
         FileWriter flwriter = null;
@@ -149,6 +197,8 @@ public class Passenger2 implements OperatorPFiles {
         this.name = name;
     }
 
+
+
     public String getPassport() {
         return passport;
     }
@@ -164,6 +214,8 @@ public class Passenger2 implements OperatorPFiles {
     public void setNationality(String nationality) {
         Nationality = nationality;
     }
+
+
 }
 
 
