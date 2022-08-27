@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import javax.swing.*;
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +28,7 @@ public class Main {
             Passenger2 p1 = new Passenger2();
             ArrayList<Passenger2> PassengerList;
                 int option;
-                do{option = Integer.parseInt(showInputDialog(null,
+              /*DO*/                  do{option = Integer.parseInt(showInputDialog(null,
                         """
                                 --------------------------------------------------------------
                                 -    Enter ones of these options                             \s
@@ -42,7 +43,8 @@ public class Main {
                                 -    7- Exit                                                        \s
                                 -                                                            \s
                                 --------------------------------------------------------------"""));
-                        switch (option){
+
+              /*SWITCH*/        switch (option){
                                 case 1://------------------add Flights----------------------------
                                         break;
                                 case 2://------------------add Passengers-------------------------
@@ -73,11 +75,11 @@ public class Main {
 
                         }
 
-                }while(option!=7);
+              /*WHILE*/                  }while(option!=7);
+}//----------------------------------------------------- END MENU -----------------------------------
+/*--END--*/
 
 
-
-    }
 
         public static void main(String [] args){
             log.trace("LOG TRACE");
@@ -89,33 +91,8 @@ public class Main {
 
 
 
-            //PrivateHangar PHangar1 = new PrivateHangar("Ezeiza","Corrientes", Country.ARGENTINA,150000,788,new AirLine("Aerolines Argentinas",6556,new Flight("6556","Corrientes","Buenos Aires",15000,new Passenger2("Guillermo Busso","N4552236","Argentino"))));
-            //Entities.PrivateHangar PHangar2 = new Entities.PrivateHangar("Fiumicino","Roma","Italia",788,200000,788)
 
-
-            //Passenger2 a = PHangar1.getAirLine().getFlight().getPassenger();
-
-
-
-
-
-
-
-
-
-
-
-            //showMessageDialog(null,airPorts1.get(0));
-            //System.out.println(airPorts1.get(0)+"\n"+airPorts1.get(1));
-            //System.out.println(airPorts1.get(0));
-            //System.out.println(PHangar1.getAirLine().getFlight().getPassenger());
-            //System.out.println(a);
-
-
-        //Insert Airports Data
-                //insertAirportData(airport);
                 menu();
-
 
 
 
