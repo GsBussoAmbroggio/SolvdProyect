@@ -24,13 +24,27 @@ public class Main {
 
 
 
-    //All Gets
 
-        public static void menu(){
+
+        public static void menu(){ //-----------------------MENU------------------------------
             Passenger2 p1 = new Passenger2();
             ArrayList<Passenger2> PassengerList;
                 int option;
-                do{option = Integer.parseInt(showInputDialog(null, ""));
+                do{option = Integer.parseInt(showInputDialog(null,
+                        """
+                                --------------------------------------------------------------
+                                -    Enter ones of these options                             \s
+                                -                                                            \s
+                                -    1- add Flights                                         \s
+                                -    2- add Passengers                                     \s
+                                -    3- Show Flight List
+                                -    4- Show Passengers List
+                                -    5- Check some Passenger info by Flight number                                  \s
+                                -    6- check some Passenger info by name
+                                -
+                                -    7- Exit                                                        \s
+                                -                                                            \s
+                                --------------------------------------------------------------"""));
                         switch (option){
                                 case 1:
                                         showMessageDialog(null,"Hola");//Show Airport
