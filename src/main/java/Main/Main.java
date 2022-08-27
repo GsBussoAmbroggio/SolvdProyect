@@ -23,10 +23,7 @@ public class Main {
     }
 
 
-
-
-
-        public static void menu(){ //-----------------------MENU------------------------------
+/*--MENU--*/public static void menu(){ //-----------------------MENU------------------------------
             Passenger2 p1 = new Passenger2();
             ArrayList<Passenger2> PassengerList;
                 int option;
@@ -46,10 +43,9 @@ public class Main {
                                 -                                                            \s
                                 --------------------------------------------------------------"""));
                         switch (option){
-                                case 1:
-                                        showMessageDialog(null,"Hola");//Show Airport
+                                case 1://------------------add Flights----------------------------
                                         break;
-                                case 2://add Passengers
+                                case 2://------------------add Passengers-------------------------
                                     PassengerList = p1.CreatePassenger();
                                     int op;
                                     do {
@@ -62,17 +58,17 @@ public class Main {
                                     while (op==0);
                                     p1.createFile(PassengerList);
                                         break;
-                                case 3://Show Flight List
+                                case 3://------------------Show Flight List-----------------------
                                         break;
-                                case 4://Show Passengers List
+                                case 4://--------------Show Passengers List-----------------------
                                     System.out.println(p1.readFile());
                                         break;
-                                case 5://Check some Passenger info by Flight number
+                                case 5://---------Check some Passenger info by Flight number------
                                         break;
-                                case 6://check some Passenger info by name
+                                case 6://---------Check some Passenger info by name---------------
                                         break;
                                 case 7:showMessageDialog(null,"you are leaving the program");
-                                        break;//Exit
+                                        break;//--------------------Exit--------------------------
                                 default : showMessageDialog(null,"error");
 
                         }
@@ -92,7 +88,7 @@ public class Main {
             log.fatal("LOG FATAL");
 
 
-            ArrayList<PrivateHangar> airPorts1 = new ArrayList<>();
+
             //PrivateHangar PHangar1 = new PrivateHangar("Ezeiza","Corrientes", Country.ARGENTINA,150000,788,new AirLine("Aerolines Argentinas",6556,new Flight("6556","Corrientes","Buenos Aires",15000,new Passenger2("Guillermo Busso","N4552236","Argentino"))));
             //Entities.PrivateHangar PHangar2 = new Entities.PrivateHangar("Fiumicino","Roma","Italia",788,200000,788)
 
