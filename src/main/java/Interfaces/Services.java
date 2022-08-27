@@ -5,7 +5,7 @@ import Entities.Passenger2;
 import java.util.ArrayList;
 
 public interface Services {
-    public ArrayList CreatePassenger();
+    public void CreatePassenger(ArrayList<Passenger2> PassengerList);
 
 
 }

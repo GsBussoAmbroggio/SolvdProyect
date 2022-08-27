@@ -72,18 +72,22 @@ public final class Passenger2 extends Person implements OperatorPFiles, Services
 //TODO Interfaces.Services methods
 //Interface Interfaces.Services Methods
     @Override
-    public ArrayList CreatePassenger(){
-
-
-        int n = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter how many passengers there are in this flight "));
-        Passenger2[] passenger = new Passenger2[n];
-        for(int i=0; i<n; i++) {
-            passenger[i] = new Passenger2();
-
+    public void CreatePassenger(ArrayList<Passenger2> PassengerList){
+        boolean flag= true;
+        int op;
+        while (flag){
+            Passenger2 passenger = new Passenger2();
+            passenger.setName(JOptionPane.showInputDialog(null,"Passenger name"));
+            passenger.setPassport(JOptionPane.showInputDialog(null,"Passenger Passport"));
+            passenger.setNationality(JOptionPane.showInputDialog(null,"Passenger nationality"));
+            PassengerList.add(passenger);
+            op = JOptionPane.showConfirmDialog(null, "Do you want to register another passenger ?");
+            if (op!=0){
+                flag=false;
+            }
         }
-        List<Passenger2> PassengerList = new ArrayList<Passenger2>(Arrays.asList(passenger));
 
-        return (ArrayList) PassengerList;
+
     }
 
 

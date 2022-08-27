@@ -26,7 +26,7 @@ public class Main {
 
 /*--MENU--*/public static void menu(){ //-----------------------MENU------------------------------
             Passenger2 p1 = new Passenger2();
-            ArrayList<Passenger2> PassengerList;
+            ArrayList<Passenger2> PassengerList=new ArrayList<>();
                 int option;
               /*DO*/                  do{option = Integer.parseInt(showInputDialog(null,
                         """
@@ -48,22 +48,13 @@ public class Main {
                                 case 1://------------------add Flights----------------------------
                                         break;
                                 case 2://------------------add Passengers-------------------------
-                                    PassengerList = p1.CreatePassenger();
-                                    int op;
-                                    do {
-                                        int n = Integer.parseInt(JOptionPane.showInputDialog(null, "Which passenger do you want to set"));
-                                        PassengerList.get(n).setName(JOptionPane.showInputDialog(null,"Passenger name"));
-                                        PassengerList.get(n).setPassport(JOptionPane.showInputDialog(null,"Passenger Passport"));
-                                        PassengerList.get(n).setNationality(JOptionPane.showInputDialog(null,"Passenger nationality"));
-                                        op = JOptionPane.showConfirmDialog(null, "Do you want to register another passenger ?");
-                                    }
-                                    while (op==0);
+                                    p1.CreatePassenger(PassengerList);
                                     p1.createFile(PassengerList);
                                         break;
                                 case 3://------------------Show Flight List-----------------------
                                         break;
                                 case 4://--------------Show Passengers List-----------------------
-                                    System.out.println(p1.readFile());
+                                    log.info(p1.readFile());
                                         break;
                                 case 5://---------Check some Passenger info by Flight number------
                                         break;
@@ -88,6 +79,9 @@ public class Main {
             log.warn("LOG WARN");
             log.error("LOG ERROR");
             log.fatal("LOG FATAL");
+
+
+
 
 
 
