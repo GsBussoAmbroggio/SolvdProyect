@@ -15,18 +15,18 @@ import static javax.swing.JOptionPane.showMessageDialog;
 
 public class Main {
     private static final Logger log= LogManager.getLogger(Main.class);
-    public static ArrayList CreatePassengers(ArrayList<Passenger2>Passenger){
+    /*public static ArrayList CreatePassengers(ArrayList<Passenger2>Passenger){
 
 
         int n = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter how many passengers there are in this flight "));
         ArrayList<Passenger2> passenger = new ArrayList<>(n);
-        for (int i=0;i<passenger.size();i++) {
-            passenger.add(i, new Passenger2());
+        for (Passenger2 aux : passenger) {
+            passenger.add(, new Passenger2());
         }
 
         return passenger ;
 
-    }
+    }*/
 
 
 
@@ -78,18 +78,30 @@ public class Main {
 
 
             ArrayList<PrivateHangar> airPorts1 = new ArrayList<>();
-            PrivateHangar PHangar1 = new PrivateHangar("Ezeiza","Corrientes", Country.ARGENTINA,150000,788,new AirLine("Aerolines Argentinas",6556,new Flight("6556","Corrientes","Buenos Aires",15000,new Passenger2("Guillermo Busso","N4552236","Argentino"))));
+            //PrivateHangar PHangar1 = new PrivateHangar("Ezeiza","Corrientes", Country.ARGENTINA,150000,788,new AirLine("Aerolines Argentinas",6556,new Flight("6556","Corrientes","Buenos Aires",15000,new Passenger2("Guillermo Busso","N4552236","Argentino"))));
             //Entities.PrivateHangar PHangar2 = new Entities.PrivateHangar("Fiumicino","Roma","Italia",788,200000,788)
 
 
-            Passenger2 a = PHangar1.getAirLine().getFlight().getPassenger();
+            //Passenger2 a = PHangar1.getAirLine().getFlight().getPassenger();
 
-            ArrayList PassengerList = new ArrayList();
+
             Passenger2 p1 = new Passenger2();
 
-            CreatePassengers(PassengerList);
+            ArrayList<Passenger2> PassengerList = p1.CreatePassenger();
+            int op;
+            do {
+                int n = Integer.parseInt(JOptionPane.showInputDialog(null, "Which passenger do you want to set"));
+                PassengerList.get(n).setName(JOptionPane.showInputDialog(null,"Passenger name"));
+                PassengerList.get(n).setPassport(JOptionPane.showInputDialog(null,"Passenger Passport"));
+                PassengerList.get(n).setNationality(JOptionPane.showInputDialog(null,"Passenger nationality"));
+                op = JOptionPane.showConfirmDialog(null, "Do you want to register another passenger ?");
+            }
+            while (op==0);
+
             System.out.println(PassengerList);
+
             //System.out.println(PassengerList.get(0));
+
 
 
 

@@ -10,7 +10,7 @@ import java.util.Objects;
 import java.util.function.IntFunction;
 import java.util.stream.Stream;
 
-public final class Passenger2 extends ArrayList implements OperatorPFiles, Services {
+public final class Passenger2 extends Person implements OperatorPFiles, Services {
 
         //Attributes
         private String name;
@@ -23,14 +23,18 @@ public final class Passenger2 extends ArrayList implements OperatorPFiles, Servi
 
 //}
 
-    public Passenger2() {
-    }
-
-    public Passenger2(String name, String passport, String nationality) {
+    public Passenger2(int age, String sex, String name, String passport, String nationality, boolean list) {
+        super(age, sex);
         this.name = name;
         this.passport = passport;
         Nationality = nationality;
+        this.list = list;
     }
+
+    public Passenger2() {
+    }
+
+
 
 
 
@@ -47,7 +51,7 @@ public final class Passenger2 extends ArrayList implements OperatorPFiles, Servi
             return Objects.hash(getName(), getPassport(), getNationality());
         }
 
-    @Override
+    /*@Override
     public Stream stream() {
         return super.stream();
     }
@@ -55,7 +59,7 @@ public final class Passenger2 extends ArrayList implements OperatorPFiles, Servi
     @Override
     public Stream parallelStream() {
         return super.parallelStream();
-    }
+    }*/
 
     @Override
         public String toString() {
@@ -68,15 +72,17 @@ public final class Passenger2 extends ArrayList implements OperatorPFiles, Servi
 //TODO Interfaces.Services methods
 //Interface Interfaces.Services Methods
     @Override
-    public ArrayList CreatePassenger(ArrayList<Passenger2>Passengerlist){
+    public ArrayList CreatePassenger(){
 
 
         int n = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter how many passengers there are in this flight "));
         Passenger2[] passenger = new Passenger2[n];
         for(int i=0; i<n; i++) {
             passenger[i] = new Passenger2();
+
         }
         List<Passenger2> PassengerList = new ArrayList<Passenger2>(Arrays.asList(passenger));
+
         return (ArrayList) PassengerList;
     }
 
@@ -197,7 +203,13 @@ public final class Passenger2 extends ArrayList implements OperatorPFiles, Servi
         this.name = name;
     }
 
+    public boolean isList() {
+        return list;
+    }
 
+    public void setList(boolean list) {
+        this.list = list;
+    }
 
     public String getPassport() {
         return passport;

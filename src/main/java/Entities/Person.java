@@ -7,7 +7,9 @@ public abstract class Person {
         private String sex;
 
 //Constructor
+    public Person(){
 
+    }
         public Person(int age, String sex) {
             this.age = age;
             this.sex = sex;
