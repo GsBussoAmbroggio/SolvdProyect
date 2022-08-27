@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f93b515-607d-4579-8faa-b0788dfa9df9" name="Changes" comment="Work in progress 26/08/2022">
+    <list default="true" id="9f93b515-607d-4579-8faa-b0788dfa9df9" name="Changes" comment="Work in progress morning 27/08/2022">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Passenger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Passenger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Services.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterDir="false" />
     </list>
@@ -112,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661486823778</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Work in progress morning 27/08/2022">
+      <created>1661606767723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661606767723</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work in progress 24/08/2022" />
     <MESSAGE value="Work in progress 26/08/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work in progress 26/08/2022" />
+    <MESSAGE value="Work in progress morning 27/08/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work in progress morning 27/08/2022" />
   </component>
 </project>

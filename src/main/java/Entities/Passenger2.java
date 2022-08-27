@@ -136,7 +136,7 @@ public final class Passenger2 extends Person implements OperatorPFiles, Services
 
     @Override
     public ArrayList readFile() {// crea el flujo para leer desde el archivo
-        File file = new File("C:\\\\Users\\\\guill\\\\IdeaProjects\\\\Airport3\\\\src\\\\main\\\\resources\\\\Passengerlist.txt\"");
+        File file = new File("C:\\\\Users\\\\guill\\\\IdeaProjects\\\\Airport3\\\\src\\\\main\\\\resources\\\\Passengerlist.txt");
         ArrayList passengersList= new ArrayList<>();
         Scanner scanner;
         try {
@@ -191,6 +191,7 @@ public final class Passenger2 extends Person implements OperatorPFiles, Services
                 }
             }
         }
+
 
 
 //Getters & Setters
