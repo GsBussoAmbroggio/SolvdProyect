@@ -1,5 +1,6 @@
 package Entities;
 
+import Exceptions.CustomExpection;
 import Interfaces.OperatorPFiles;
 import Interfaces.Services;
 
@@ -110,7 +111,7 @@ public final class Passenger2 extends Person implements OperatorPFiles, Services
 
     //Interface Interfaces.OperatorPFiles Methods
     @Override
-    public void createFile(ArrayList <Passenger2> list) {
+    public void createFile(ArrayList <Passenger2> list)throws CustomExpection {
         FileWriter flwriter = null;
         try {
             //crea el flujo para escribir en el archivo
@@ -127,13 +128,16 @@ public final class Passenger2 extends Person implements OperatorPFiles, Services
 
         } catch (IOException e) {
             e.printStackTrace();
+            throw new CustomExpection("abc");
         } finally {
             if (flwriter != null) {
                 try {//cierra el flujo principal
                     flwriter.close();
                 } catch (IOException e) {
                     e.printStackTrace();
+
                 }
+
             }
         }
     }

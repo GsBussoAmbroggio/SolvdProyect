@@ -1,11 +1,8 @@
 package Entities;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-public class Exceptions {
+public class Exceptions1 {
+    public Exceptions1(String a) {
+    }
 
     /*public class ExceptionHandling {
 
